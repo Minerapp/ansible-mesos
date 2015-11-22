@@ -9,5 +9,5 @@ description "mesos slave"
 start on stopped rc RUNLEVEL=[2345]
 respawn
 
-IP={{inventory_hostname}} exec /usr/bin/mesos-init-wrapper slave
+exec /usr/bin/mesos-init-wrapper slave
 #/usr/sbin/mesos-slave --ip={{inventory_hostname}} --log_dir=/var/log/mesos
